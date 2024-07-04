@@ -3,6 +3,7 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import "./reset.css";
 import QueryProvider from "@/app/provider";
+import Link from "next/link";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -16,10 +17,17 @@ export default function RootLayout({children}: Readonly<{
 }>) {
   return (
       <html lang="en">
-      <body className={inter.className}>
-      <QueryProvider>
-        {children}
-      </QueryProvider>
+      <body className={`${inter.className} max-w-[1200px] min-w-[500px] ml-auto  mr-auto`} >
+      <section>
+        <div className={"text-center text-[40px] mb-3"}>
+          <Link href={"/"}>포켓몬 도감</Link>
+        </div>
+      </section>
+      <section>
+        <QueryProvider>
+          {children}
+        </QueryProvider>
+      </section>
       </body>
       </html>
   );

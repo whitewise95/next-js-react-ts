@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.49.2",
+    "axios": "^1.7.2",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
