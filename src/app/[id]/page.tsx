@@ -4,7 +4,7 @@ import {getDetailPokemon} from "@/api/pokemon";
 
 type paramsType = { params: { id: string } }
 
-const Page = async ({params}: paramsType) => {
+const Detail = async ({params}: paramsType) => {
   const pokemon: Pokemon = await getDetailPokemon(params.id);
 
   return (
@@ -55,4 +55,4 @@ const Page = async ({params}: paramsType) => {
   );
 }
 
-export default Page;
+export default Detail;
