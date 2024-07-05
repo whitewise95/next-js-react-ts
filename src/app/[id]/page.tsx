@@ -5,14 +5,15 @@ import {getDetailPokemon} from "@/api/pokemon";
 type paramsType = { params: { id: string } }
 
 const Page = async ({params}: paramsType) => {
-  const pokemon:Pokemon = await getDetailPokemon(params.id);
-  debugger
+  const pokemon: Pokemon = await getDetailPokemon(params.id);
+
   return (
       <div
           className={"border-[1px] border-solid w-[500px] h-auto flex flex-col gap-3 items-center mr-auto ml-auto  pt-1 pl-1 pr-1 pb-1"}>
         <div>{pokemon?.korean_name}</div>
         <div>No : {pokemon?.id}</div>
-        <Image src={pokemon?.sprites?.front_default as string} width={200} height={200}></Image>
+        <Image src={pokemon?.sprites?.front_default as string} alt={"포켓몬"} width={200}
+               height={200}></Image>
         <div>이름 : {pokemon?.korean_name}</div>
         <div className={"flex gap-5"}>
           <div>키 : {pokemon?.height} cm</div>
