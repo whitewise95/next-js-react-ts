@@ -9,7 +9,7 @@ import Spinner from "@/components/Spinner";
 export default function Home() {
 
   const {
-    data: pokemonList = [],
+    data: pokemonList,
     isPending,
     isError,
   } = useQuery({
